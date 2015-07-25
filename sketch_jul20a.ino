@@ -9,13 +9,12 @@
 #define BUZZER_PIN 3
 #define LEFT_BUTTON_PIN 6
 #define RIGHT_BUTTON_PIN 5
-
-#define SHORT_CLICK_MIN_DURATION 20
-#define LONG_CLICK_MIN_DURATION 500
-// RGB LED
 #define RED_PIN 9
 #define BLUE_PIN 10
 #define GREEN_PIN 11
+
+#define SHORT_CLICK_MIN_DURATION 20
+#define LONG_CLICK_MIN_DURATION 500
 
 #define DELAY 1000
 #define COLORS_COUNT 5
@@ -65,6 +64,11 @@ void setup() {
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLOCK_PIN, OUTPUT);
   pinMode(BUZZER_PIN, OUTPUT);
+  pinMode(LEFT_BUTTON_PIN, INPUT_PULLUP);
+  pinMode(RIGHT_BUTTON_PIN, INPUT_PULLUP);
+  pinMode(RED_PIN, OUTPUT);
+  pinMode(BLUE_PIN, OUTPUT);
+  pinMode(GREEN_PIN, OUTPUT);
   updateTimeLEDs();
 }
 
